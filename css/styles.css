@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+li {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+.gallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 360px; /* Ширина каждого элемента */
+  height: 200px; /* Высота каждого элемента */
+  transition: margin 0.3s ease-in-out;
+}
+.gallery-link {
+  display: block;
+}
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  transition: all 0.3s ease-in-out;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  max-width: 1300px;
+  list-style: none;
+}
+
+.gallery-item {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.gallery-item:hover .gallery-image {
+  width: 376px;
+  height: 208px; /* Увеличение на 10% (~16px при 160px) */
+}
