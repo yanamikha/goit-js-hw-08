@@ -70,14 +70,14 @@ function addGalleryItemEl(img) {
           class="gallery-image"
           src=${img.preview}
           data-source=${img.original}
-          alt=${img.description}
+          alt="${img.description}"
         />
       </a>
     </li>`;
 }
 function showOriginalImage(event) {
-  var targetEl = event.target;
-  if (targetEl.className !== 'gallery-image') {
+  let targetEl = event.target;
+  if (targetEl.className !== 'gallery-image' && targetEl.nodeName !== 'IMG') {
     return;
   }
   event.preventDefault();
